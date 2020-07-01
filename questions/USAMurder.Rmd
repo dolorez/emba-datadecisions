@@ -1,0 +1,36 @@
+
+Question
+========
+  
+What is the skewness of the distribution displayed on the below plot?
+\
+```{r USrape, echo=FALSE, results="hide", warning=FALSE, fig.height = 3, fig.width = 6, fig.path = "", fig.cap = "Rape arrests in USA (1973)"}
+library(tidyverse)
+library(e1071)
+library(datasets)
+data(USArrests)
+USArrests %>%
+  ggplot(aes(Murder)) +
+  geom_density(fill="lightgreen") +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = .5)) +
+  ggtitle("Murder arrests in USA (1973)") +
+  xlab("Number of Murder per 100k Population") +
+  ylab("")
+```
+
+
+Answerlist
+----------
+* 0.37
+* 0
+* 1.53
+* -0.75
+* 0.75
+
+Meta-information
+================
+  exname: Rape arrests in USA per 100k people
+extype: schoice
+exsolution: 10000
+exshuffle: TRUE

@@ -1,14 +1,20 @@
 library("exams")
+library(tidyverse)
+library(e1071)
+library(datasets)
 
-exams_skeleton(markup = "markdown", encoding = "UTF-8", writer = "exams2pdf")
+# exams_skeleton(markup = "markdown", encoding = "UTF-8", writer = "exams2pdf")
 
-skewness_exercises <- c("questions/TexasMedianSalePrice.Rmd", "questions/USARape.Rmd")
-## note that the currency exercise is in UTF-8 encoding
-
-## generate a single PDF exam (shown in PDF viewer)
-## with specification of a template (for an exam) %s encoding
-
-exams2pdf("questions/skewness_intuition.Rmd")
+skewness_exercises <- c("questions/TexasMedianSalePrice.Rmd"
+                      , "questions/TexasSales.Rmd"
+                      , "questions/USARape.Rmd"
+                      , "questions/USAMurder.Rmd"
+                      , "questions/USAUrbanPop.Rmd"
+                      , "questions/discoveries.Rmd"
+                      , "questions/UKRoadCasualties.Rmd"
+                      , "questions/UKGasConsumption.Rmd"
+                      , "questions/LongleyPopulation.Rmd"
+                      , "questions/IrisSetosaSepalWidth.Rmd")
 
 exams2pdf(skewness_exercises
           , n = 1
@@ -21,14 +27,3 @@ exams2pdf(skewness_exercises
 #         , edir = "exercises"
 #         , template = "templates/exam.tex")
 # 
-# ## generate three PDF exams and corresponding solutions in output directory
-# ## (with the header used to set a custom Date and ID for the exam)
-exams2pdf(skewness_exercises, n = 1, name = c("pdf-exercises", "pdf-solution"),
-          encoding = "UTF-8",
-          dir = "output",
-          edir = "exercises",
-          template = c("templates/exam.tex", "templates/solution.tex"),
-          header = list(
-            Date = "2015-01-01",
-            ID = function(i) formatC(i, width = 5, flag = "0")
-          ))

@@ -1,0 +1,38 @@
+Question
+========
+
+This question is tricky and I included it only to show that in real life, the concepts are not always as clear-cut as in the exercises. Don't worry if you got this particular one wrong.
+What is the skewness of the distribution displayed on the below plot?
+\
+```{r txhousing, echo=FALSE, results="hide", warning=FALSE, fig.height = 3, fig.width = 6, fig.path = "", fig.cap = "House sales transactions in Texas (2000-2015)"}
+data(iris)
+iris %>% 
+  filter(Species == "setosa") %>%
+  ggplot(aes(Sepal.Width)) +
+  geom_density(fill="lightgreen") +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = .5)) +
+  ggtitle("Sepal Width of Iris Setosa") +
+  xlab("Sepal width") +
+  ylab("")
+```
+
+Answerlist
+----------
+* 1.18
+* 0
+* 0.59
+* -0.59
+* -1.18
+
+Meta-information
+================
+exname: median sale prices of houses in Texas
+extype: schoice
+exsolution: 10000
+exshuffle: TRUE
+
+
+
+
+

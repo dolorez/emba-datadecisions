@@ -1,0 +1,36 @@
+Question
+========
+
+What is the skewness of the distribution displayed on the below plot?
+\
+```{r txhousing, echo=FALSE, results="hide", warning=FALSE, fig.height = 3, fig.width = 6, fig.path = "", fig.cap = "UK Gas Consumption 1960-87"}
+data(UKgas)
+data.frame(consumption = as.numeric(UKgas)) %>%
+  ggplot(aes(consumption)) +
+  geom_density(fill="lightgreen") +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = .5)) +
+  ggtitle("UK Gas Consumption 1960-87") +
+  xlab("Gas Consumption") +
+  ylab("")
+```
+
+Answerlist
+----------
+* 1.28
+* 0
+* 2.56
+* 5.12
+* 0.64
+
+Meta-information
+================
+exname: median sale prices of houses in Texas
+extype: schoice
+exsolution: 10000
+exshuffle: TRUE
+
+
+
+
+

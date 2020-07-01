@@ -1,0 +1,36 @@
+Question
+========
+
+What is the skewness of the distribution displayed on the below plot?
+\
+```{r txhousing, echo=FALSE, results="hide", warning=FALSE, fig.height = 3, fig.width = 6, fig.path = "", fig.cap = "Longley survey: population"}
+data(longley)
+longley %>%
+  ggplot(aes(Population)) +
+  geom_density(fill="lightgreen") +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = .5)) +
+  ggtitle("Longley survey: population") +
+  xlab("Population") +
+  ylab("")
+```
+
+Answerlist
+----------
+* 0.26
+* 0
+* 1.04
+* -0.26
+* -1.04
+
+Meta-information
+================
+exname: median sale prices of houses in Texas
+extype: schoice
+exsolution: 10000
+exshuffle: TRUE
+
+
+
+
+

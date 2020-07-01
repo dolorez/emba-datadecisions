@@ -1,0 +1,33 @@
+
+Question
+========
+  
+What is the skewness of the distribution displayed on the below plot?
+\
+```{r USrape, echo=FALSE, results="hide", warning=FALSE, fig.height = 3, fig.width = 6, fig.path = "", fig.cap = "Annual number of important discoveries"}
+data(discoveries)
+data.frame(discoveries=as.numeric(discoveries)) %>%
+  ggplot(aes(discoveries)) +
+  geom_density(fill="lightgreen") +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = .5)) +
+  ggtitle("Annual number of important discoveries") +
+  xlab("Number of discoveries") +
+  ylab("")
+```
+
+
+Answerlist
+----------
+* 1.20
+* 0
+* 0.25
+* -0.75
+* 0.75
+
+Meta-information
+================
+  exname: Rape arrests in USA per 100k people
+extype: schoice
+exsolution: 10000
+exshuffle: TRUE
